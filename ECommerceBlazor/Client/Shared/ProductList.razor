@@ -1,0 +1,51 @@
+﻿<h3>Component1</h3>
+
+<ul>
+    @foreach (var product in Products)
+        {
+            <li class="media my-3">
+                <div class="media-img-wrapper mr-2">
+                    <a href="#">
+                        <img class="media-img" src="@product.ImageUrl" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h5 class="mt-0">@product.Name</h5>
+                    <p>@product.Description</p>
+                    <p>@product.Price</p>
+                    
+                </div>
+            </li>
+        }
+</ul>
+
+@code {
+    private static List<Product> Products = new List<Product>
+    {
+        new Product
+        {
+            Id =1 ,
+            Name = "First product",
+            Description ="First product First product First product First product First product First product First product ",
+            Price = 99.9m,
+            ImageUrl = "https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/https://images.ctfassets.net/spoqsaf9291f/4LkRwsdriDUzmpgR2QVCf7/95ebe8f6296bd68f14f0ae0291cb51c0/Productwiki.png"
+        },
+        new Product
+        {
+            Id =1 ,
+            Name = "Second Product",
+            Description ="Second Product Second Product Second Product Second Product Second Product Second Product Second Product Second Product Second Product Second Product ",
+            Price = 99.9m,
+            ImageUrl = "https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/https://images.ctfassets.net/spoqsaf9291f/4LkRwsdriDUzmpgR2QVCf7/95ebe8f6296bd68f14f0ae0291cb51c0/Productwiki.png"
+        },
+                new Product
+        {
+            Id =1 ,
+            Name = "Third Product ",
+            Description ="Third Product Third Product Third Product Third Product Third Product Third Product Third Product Third Product ",
+            Price = 99.9m,
+            ImageUrl = "https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/https://images.ctfassets.net/spoqsaf9291f/4LkRwsdriDUzmpgR2QVCf7/95ebe8f6296bd68f14f0ae0291cb51c0/Productwiki.png"
+        },
+    };
+}
+
